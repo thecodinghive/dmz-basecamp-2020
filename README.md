@@ -10,6 +10,7 @@ code: This folder contains all the notebooks we will be using throughout the two
   - data_exploration1.ipynb (Introduction to data visualization and summary statistics)
   
 slides: pdf slides covered during the workshop
+
 datasets: all datasets used during the workshop
   - churn.csv: churn dataset, no cleaning was performed (level: advanced)
   - churn_cleaned.csv: churcn dataset, some cleaning was already performed (level beginner)
