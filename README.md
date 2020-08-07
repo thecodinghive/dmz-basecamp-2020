@@ -1,6 +1,6 @@
 # dmz-basecamp-2020
 
-Welcome to Basecamp 2020 - AI 101 Workshop 
+Welcome to Basecamp 2020 - AI 101 Workshop - August 8 2020
 
 Please find below a description of the folders and their content:
 
