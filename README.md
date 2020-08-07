@@ -10,9 +10,9 @@ Please find below a description of the folders and their content:
   - introduction_to_python_programming2.ipynb (Introduction to dataframes, pandas and numpy)
   - data_exploration1.ipynb (Introduction to data visualization and summary statistics)
   
-<b>slides:</b> pdf slides covered during the workshop
+<b>slides:</b> PDF slides used in the workshop
 
-<b>datasets:</b> all datasets used during the workshop
+<b>datasets:</b> all the datasets used in the workshop
   - churn.csv: churn dataset, no cleaning was performed (level: advanced)
   - churn_cleaned.csv: churcn dataset, some cleaning was already performed (level beginner)
-  - heart.csv (heart dataset for data exploration module
+  - heart.csv (heart dataset for data exploration module)
