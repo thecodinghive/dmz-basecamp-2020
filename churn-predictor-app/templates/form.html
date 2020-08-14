@@ -1,48 +1,29 @@
 {% extends 'layout.html' %}
 
-{% block title %}Breast Cancer Risk Prediction{% endblock %}
+{% block title %}Customer Churn Prediction{% endblock %}
 
 {% block content %}
 <form method="post" action="./process_form">
   <div class="columns">
     <div class="column is-half is-offset-one-quarter">
       <div class="notification">
-        Welcome to our breast cancer risk prediction tool!
+        Welcome to our customer churn prediction tool!
         Enter your information below, and using machine learning,
-        we will predict your risk.
+        we will predict the cusomter's probability to churn.
       </div><div class="columns is-mobile">
         <div class="column">
           <div class="field">
-            <label class="label">Worst Perimeter</label>
+            <label class="label">Contract Month to Month</label>
             <div class="control">
-              <input class="input" name="worst_perimeter" type="number" min="50" max="252" step="0.01" value="{{ form_values['worst_perimeter'] }}" required>
+              <input class="input" name="contract-month-month" type="number" min="50" max="252" step="0.01" value="{{ form_values['contract-month-month'] }}" required>
             </div>
           </div>
         </div>
         <div class="column">
           <div class="field">
-            <label class="label">Worst Concave Points</label>
+            <label class="label">Tenure</label>
             <div class="control">
-              <input class="input" name="worst_concave_points" type="number" min="0" step="0.0001" value="{{ form_values['worst_concave_points'] }}" required>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <label class="label">Worst Radius</label>
-            <div class="control">
-              <input class="input" name="worst_radius" type="number" min="0" step="0.01" value="{{ form_values['worst_radius'] }}" required>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <label class="label">Mean Concave Points</label>
-            <div class="control">
-              <input class="input" name="mean_concave_points" type="number" min="0" step="0.00001" value="{{ form_values['mean_concave_points'] }}" required>
+              <input class="input" name="tenure" type="number" min="0" step="0.0001" value="{{ form_values['tenure'] }}" required>
             </div>
           </div>
         </div>
@@ -51,9 +32,28 @@
       <div class="columns is-mobile">
         <div class="column">
           <div class="field">
-            <label class="label">Worst Concavity</label>
+            <label class="label">Internet Fiber Optics</label>
             <div class="control">
-              <input class="input" name="worst_concavity" type="number" min="0" step="0.0001" value="{{ form_values['worst_concavity'] }}" required>
+              <input class="input" name="internet-fo" type="number" min="0" step="0.01" value="{{ form_values['internet-fo'] }}" required>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <label class="label">Monthly Charges</label>
+            <div class="control">
+              <input class="input" name="monthly-charges" type="number" min="0" step="0.00001" value="{{ form_values['monthly-charges'] }}" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <label class="label">Electronic Payment</label>
+            <div class="control">
+              <input class="input" name="payment-electronic" type="number" min="0" step="0.0001" value="{{ form_values['payment-electronic'] }}" required>
             </div>
           </div>
         </div>
