@@ -22,7 +22,7 @@ def load_model():
     if not model:
         # print("--->>>> loading model...")
         # TODO: Change the filename to match your model's filename
-        model = joblib.load("breast_cancer_classifier.pkl")
+        model = joblib.load("churn_classifier.pkl")
     return model
 
 
@@ -40,30 +40,36 @@ def process_form():
     # Get the values that were submitted in the form, and
     # convert them to correct numeric format (integer or floats)
     values = {
-        'worst_perimeter': float(request.form['worst_perimeter']),
-        'worst_concave_points': float(request.form['worst_concave_points']),
-        'worst_radius': float(request.form['worst_radius']),
-        'mean_concave_points': float(request.form['mean_concave_points']),
-        'worst_concavity': float(request.form['worst_concavity']),
+        'contract-month-month': float(request.form['contract-month-month']),
+        'tenure': float(request.form['tenure']),
+        'internet-fo': float(request.form['winternet-fo']),
+        'monthly-charges': float(request.form['monthly-charges']),
+        'payment-electonic': float(request.form['payment-electonic']),
     }
+    
+
+
+
+
+
 
     # These are the values that we will display on the results page
     input_values = {
-        "Worst perimeter": values['worst_perimeter'],
-        "Worst Concave Points": values['worst_concave_points'],
-        "Worst Radius": values['worst_radius'],
-        "Mean Concave Points": values['mean_concave_points'],
-        "Worst Concavity": values['worst_concavity'],
+        "Contract Month to Month (0,1)": values['contract-month-month'],
+        "Tenure (months)": values['tenure'],
+        "Internet Fiber Optics (0,1)": values['internet-fo'],
+        "Monthly Charges ($)": values['monthly-charges'],
+        "Electronic Payment": values['payment-electonic'],
     }
 
     # Load the model & model params
     model = load_model()
     model_params = [[
-        values['worst_perimeter'],
-        values['worst_concave_points'],
-        values['worst_radius'],
-        values['mean_concave_points'],
-        values['worst_concavity'],
+        values['contract-month-month'],
+        values['tenure'],
+        values['internet-fo'],
+        values['monthly-charges'],
+        values['payment-electronic'],
     ]]
 
     # Use our model to perform predictions
