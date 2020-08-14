@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% block title %}Breast Cancer Prediction Results{% endblock %}
+{% block title %}Customer Churn Prediction Results{% endblock %}
 
 {% block content %}
 <div class="results">
@@ -16,7 +16,7 @@
           Malignant
         </div>
       </div>
-      This tumor is predicted to be malignant, with
+      This customer is predicted to churn, with
       {{ (probabilities[0] * 100) | round(4) }}%
       probability.
     </div>
@@ -31,7 +31,7 @@
           Benign
         </div>
       </div>
-      This tumor is predicted to be benign, with
+      This customer is predicted to stay, with
       {{ (probabilities[1] * 100) | round(4) }}%
       probability.
     </div>
